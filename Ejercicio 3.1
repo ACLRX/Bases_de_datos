@@ -1,0 +1,6 @@
+SELECT A.id_alquiler, C.nombre AS Nombre_Cliente, AU.marca AS Marca_Auto, A.fecha_inicio, A.fecha_fin
+FROM AlquilerPLSQL A
+JOIN ClientePLSQL C ON A.id_cliente = C.id_cliente
+JOIN AutoPLSQL AU ON A.id_auto = AU.id_auto;
+
+Esta consulta retorna una tabla que muestra el nombres del cliente y la marca del auto alquilado.
