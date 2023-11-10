@@ -1,0 +1,8 @@
+SELECT c.id_cliente, c.nombre, direccion, telefono, r.id_sucursal, su.nombre AS nombre_sucursal
+FROM clienteplsql c
+INNER JOIN reservaplsql r ON c.id_cliente = r.id_cliente 
+INNER JOIN sucursalplsql su ON su.id_sucursal = r.id_sucursal
+WHERE r.id_sucursal = '35';
+
+Retorna todos los clientes que han reservado en cierta sucursal, para la base de datos se utilizo un id de sucursal = 65 de donde 
+registran 62 registros. 
